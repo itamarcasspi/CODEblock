@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-image: url('../public/cleanBGN.jpg'); /* Path to the background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
