@@ -10,7 +10,6 @@ export const sendCode = async (req,res) => {
     try {
         
         const updatedCodeEntry = await Code.findOneAndUpdate({roomId},{code},{ new: true, upsert: true });
-        console.log(updatedCodeEntry);
         res.status(200).json(updatedCodeEntry);
     } catch (error) {
         console.error('Error saving code:', error.message);

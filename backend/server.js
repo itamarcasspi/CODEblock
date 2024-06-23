@@ -55,11 +55,9 @@ io.on("connection", (socket) => {
     socket.roomId = roomId;
     //emit room[id] users array
     io.to(socket.id).emit("getRoom", roomList[roomId]);
-    console.log(roomList);
   });
 
   socket.on("clientCodeChange", ({ mentorId, newCode }) => {
-    console.log(mentorId, "room id", socket.roomId);
     io.to(mentorId).emit("codeChange", newCode);
   });
 
