@@ -32,7 +32,7 @@ const socketManager = (id) => {
 
     if (!socket) {
       //socket setup
-      const socket = io.connect("http://localhost:5000/");
+      const socket = io.connect("https://codeblock-production-68be.up.railway.app/");
       setSocket(socket);
 
       socket.on("getRoom", (room) => {
