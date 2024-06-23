@@ -35,7 +35,6 @@ app.get("/",(req,res) => {
 //roomList, a 2d array to hold both users in each room,for multiple rooms functionality. eg [room_id][user_id]
 const roomList = {};
 io.on("connection", (socket) => {
-  console.log("a user connected", socket.id);
 
   socket.on("joinRoom", (roomId) => {
     if (!roomList[roomId]) {
@@ -62,7 +61,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("user disconnected");
     const roomId = socket.roomId;
     //remove socket.id from roomList
     const roomSize = roomList[roomId] ? roomList[roomId].length : 0;

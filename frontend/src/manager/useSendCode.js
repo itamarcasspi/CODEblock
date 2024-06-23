@@ -12,7 +12,6 @@ const useSendCode = () => {
       });
       
       const data = await res.json();
-      console.log("retrieved data ",data);
       if (data.error) {
         throw new Error(data.error);
       }

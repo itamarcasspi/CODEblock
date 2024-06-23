@@ -4,9 +4,7 @@ export const sendCode = async (req,res) => {
     const {code} = req.body;
     const {roomId} = req.params;
 
-    const newCode = new Code({roomId,code});
-    console.log("SEND CODE ARRIVED AT ROUTER,",req.roomId);
-
+    const newCode = new Code({roomId,code})
     try {
         
         const updatedCodeEntry = await Code.findOneAndUpdate({roomId},{code},{ new: true, upsert: true });

@@ -37,7 +37,6 @@ const socketManager = (id) => {
 
       socket.on("getRoom", (room) => {
         setCodeRoom(room);
-        console.log("Get rooms update", room);
       });
 
       socket.emit("joinRoom", id);
