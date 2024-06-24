@@ -15,10 +15,12 @@ Initial logging may be delayed by around a minute or more, so please be patient,
 
 ##  Demo
 ![lobby](https://github.com/itamarcasspi/CODEblock/assets/74679553/8186b248-80f3-4612-8a81-7051285b9f1d)
+
 In above picture you can see the application lobby, with a simple and clear UI.
 Every room is created dynamically with the reusable CodeRoom component.
 
 ![coderoom](https://github.com/itamarcasspi/CODEblock/assets/74679553/2b7f9ed6-af6d-4983-aa2c-53c54319e595)
+
 In the above picture you can see the code editor component, with javascript highlighting.
 The user is logged as mentor and able to display the student's code changes in real time.
 All code changes are saved in the database for furure sessions.
